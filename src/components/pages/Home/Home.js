@@ -32,8 +32,9 @@ const Home = () => {
                     <div className='bottom-line'></div>
                     <p>Through our experienced operations team we can handle various kind of supply chain operations and services</p>
                 </div>
-
-                <ProductsCarousel></ProductsCarousel>
+                <div className='my-5'>
+                    <ProductsCarousel></ProductsCarousel>
+                </div>
             </div>
         </div>
     );

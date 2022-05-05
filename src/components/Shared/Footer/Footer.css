@@ -1,0 +1,130 @@
+.footer {
+    background-color: #0C1A32;
+}
+
+.footer h4 {
+    font-size: 24px;
+    color: white;
+    margin: 0 0 20px;
+    font-weight: 500;
+}
+
+.footer ul li {
+    list-style: none;
+    margin-left: -30px;
+    padding: 5px 0;
+    color: #B5B5C3;
+}
+
+.footer ul li,
+p {
+    font-size: 14px;
+    color: #B5B5C3;
+}
+
+.footer ul li a,
+svg {
+    text-decoration: none;
+    color: #B5B5C3;
+
+    font-weight: 400;
+}
+
+.footer ul li a:hover {
+    color: #3BA4F8;
+}
+
+.icons {
+    display: flex;
+}
+
+.brand-icon-facebook {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #2D4373;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.brand-icon-facebook:hover {
+    background-color: #2e4c8f
+}
+
+.brand-icon-twitter {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #0C85D0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.brand-icon-twitter:hover {
+    background-color: #0a9cf7;
+}
+
+.brand-icon-linkedin {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #005582;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.brand-icon-linkedin:hover {
+    background-color: #1c6892;
+}
+
+.brand-icon-youtube {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #CC0000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.brand-icon-youtube:hover {
+    background-color: #ea1515;
+}
+
+.subscribe input {
+    outline: none;
+    padding: 10px 0;
+    width: 100%;
+    border-radius: 5px;
+}
+
+.subscribe button {
+    margin-top: 10px !important;
+    width: 50%;
+}
+
+.subscribe .btn-primary {
+
+    background-color: #3ba4f8 !important;
+    border-color: #3ba4f8 !important;
+    color: #ffffff !important;
+}
+
+.subscribe .btn-primary:hover {
+    background-color: #1892f6 !important;
+}

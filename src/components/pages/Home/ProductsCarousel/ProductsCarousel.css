@@ -1,19 +1,5 @@
-.swiper-slider {
-    background-color: white;
-    border-radius: 20px;
-}
-
-.slider-class {
-    border: 1px solid red;
-    border-radius: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-}
-
-.slider-class img {
-    width: 300px;
-
+.products-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
 }
