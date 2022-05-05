@@ -1,0 +1,41 @@
+.first-section {
+    padding: 100px 0;
+}
+
+.first-section h1 {
+    color: #172b4c;
+    font-size: 36px;
+    font-weight: bold;
+
+}
+
+.bottom-line {
+    border-bottom: 15px solid #6CBBFA;
+    border-radius: 2px;
+    width: 25%;
+}
+
+.first-section p {
+    color: #172b4c;
+    font-size: 16px;
+    font-weight: 400;
+    margin: 25px 0;
+}
+
+.products-section {
+    text-align: center;
+}
+
+.products-section h2 {
+    color: #172b4c;
+    font-size: 30px;
+    margin: 10px 0;
+    font-weight: 800;
+}
+
+.products-section p {
+    color: #172b4c;
+    font-size: 16px;
+    margin: 15px 0;
+    font-weight: 400;
+}
