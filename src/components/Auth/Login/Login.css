@@ -1,0 +1,140 @@
+.login-container {
+    background-color: #FAFBFD;
+}
+
+.login-container h1 {
+    text-align: center;
+    width: 300px;
+    margin: 0 auto;
+    border-bottom: 1px solid black;
+    border-width: 5px;
+    margin-bottom: 30px;
+}
+
+.login-card {
+    width: 40%;
+    margin: 0 auto;
+    background-color: white;
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.login-card h3 {
+    color: #6CBBFA;
+}
+
+.email-field {
+    display: flex;
+    justify-content: center;
+}
+
+.email-field input {
+    width: 80%;
+    outline: none;
+    border: none;
+    padding: 0 0 0 20px;
+    border-top: 1px solid rgb(161, 155, 155);
+    border-right: 1px solid rgb(161, 155, 155);
+    border-bottom: 1px solid rgb(161, 155, 155);
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.user {
+    padding: 10px;
+    border: 1px solid rgb(161, 155, 155);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    font-size: 20px;
+    color: black;
+}
+
+
+.password-field {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.password-field input {
+    width: 80%;
+    outline: none;
+    border: none;
+    padding: 0 0 0 20px;
+    border-top: 1px solid rgb(161, 155, 155);
+    border-right: 1px solid rgb(161, 155, 155);
+    border-bottom: 1px solid rgb(161, 155, 155);
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.pass {
+    padding: 10px;
+    border: 1px solid rgb(161, 155, 155);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    font-size: 20px;
+    color: black;
+}
+
+.checkboxes {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.input-fields p {
+    color: black;
+}
+
+.checkboxes p {
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.btn-sign-in {
+    margin-top: 20px;
+    background-color: #892FF6;
+    width: 100%;
+    color: white;
+}
+
+.register-text {
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.social-login-section {
+    width: 30%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.social-login-section p {
+    text-align: center;
+    color: black;
+    font-size: 18px;
+}
+
+.google {
+    width: 40%;
+    margin: 0 auto;
+    border: none;
+    border-radius: 10px;
+    text-align: center;
+    padding: 10px;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    background-color: white;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.google:hover {
+    color: red;
+}
