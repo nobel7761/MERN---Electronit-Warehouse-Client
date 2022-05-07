@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import './Login.css';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import SignUpBanner from '../SignUp/SignUpBanner/SignUpBanner';
@@ -11,6 +11,8 @@ import SocialMediaLogin from './SocialMediaLogin/SocialMediaLogin';
 import Loading from '../../Loading/Loading';
 
 const Login = () => {
+    const emailRef = useRef('');
+    const passwordRef = useRef('');
     const navigate = useNavigate();
     const [signInWithEmailAndPassword, user, loading, error] = useSignInWithEmailAndPassword(auth);
     const [sendPasswordResetEmail, sending, error1] = useSendPasswordResetEmail(auth);
@@ -37,8 +39,8 @@ const Login = () => {
 
     const handleSubmit = async (event) => {
         event.preventDefault();
-        const email = event.target.email.value;
-        const password = event.target.password.value;
+        const email = emailRef.current.value;
+        const password = passwordRef.current.value;
         if (email && password) {
             await signInWithEmailAndPassword(email, password)
             navigate('/')
@@ -51,8 +53,9 @@ const Login = () => {
         }
     }, [user]);
 
-    const resetPassword = async (event) => {
-        const email = event.target.email.value;
+    const resetPassword = async () => {
+        const email = emailRef.current.value;
+        console.log(email);
         if (email) {
             await sendPasswordResetEmail(email);
             toast("Send email");
@@ -73,6 +76,7 @@ const Login = () => {
                         <Form.Group className="mb-3" controlId="formBasicEmail">
                             <Form.Label>Email address</Form.Label>
                             <Form.Control
+                                ref={emailRef}
                                 type="email"
                                 name="email"
                                 placeholder="Enter email"
@@ -82,6 +86,7 @@ const Login = () => {
                         <Form.Group className="mb-3" controlId="formBasicPassword">
                             <Form.Label>Password</Form.Label>
                             <Form.Control
+                                ref={passwordRef}
                                 type="password"
                                 name="password"
                                 placeholder="Password"
