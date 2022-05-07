@@ -36,7 +36,6 @@ const Login = () => {
         );
     }
 
-
     const handleSubmit = async (event) => {
         event.preventDefault();
         const email = emailRef.current.value;
@@ -55,7 +54,6 @@ const Login = () => {
 
     const resetPassword = async () => {
         const email = emailRef.current.value;
-        console.log(email);
         if (email) {
             await sendPasswordResetEmail(email);
             toast("Send email");
@@ -63,7 +61,6 @@ const Login = () => {
             toast("Please enter your email address");
         }
     };
-
 
     return (
         <div className="login-container py-5">
