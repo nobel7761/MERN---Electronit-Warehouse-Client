@@ -1,6 +1,6 @@
 import { faArrowRightLong } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
 import { Link, useParams } from 'react-router-dom';
 import { toast } from 'react-toastify';
@@ -11,15 +11,16 @@ import './Inventory.css';
 const Inventory = () => {
 
     const { id } = useParams();
-    const [product] = useLoadSingleProduct(id);
+    const [product, setProduct] = useLoadSingleProduct(id);
 
     const handleUpdateQuantity = () => {
         const productQuantity = product.quantity;
         const productSold = product.sold;
 
+
         const updateInfo = { quantity: (productQuantity - 1), sold: (productSold + 1) };
 
-        const url = `http://localhost:5000/product/${id}`
+        const url = `http://localhost:5000/product/${id}`;
         fetch(url, {
             method: "PUT",
             headers: {
@@ -33,14 +34,18 @@ const Inventory = () => {
                 toast("Product Delivered!!!")
             })
     }
+    /* useEffect(() => {
+
+   }, [product])  */
 
     const handleUpdateStock = (event) => {
         event.preventDefault();
         const previousQuantity = product.quantity;
         const userProvideQuantity = event.target.typedQuantity.value;
+        const productSold = product.sold;
         event.target.reset();
 
-        const updatedStock = { quantity: (previousQuantity + parseFloat(userProvideQuantity)) };
+        const updatedStock = { quantity: (previousQuantity + parseFloat(userProvideQuantity)), sold: productSold };
         console.log(updatedStock)
 
         const url = `http://localhost:5000/updateStock/${id}`

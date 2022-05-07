@@ -3,47 +3,56 @@ import './Login.css';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import SignUpBanner from '../SignUp/SignUpBanner/SignUpBanner';
 import { Button, Container, Form } from 'react-bootstrap';
-import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useAuthState, useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
 import { toast } from 'react-toastify';
-import Spinner from '../../Loading/Loading';
 import SocialMediaLogin from './SocialMediaLogin/SocialMediaLogin';
 import Loading from '../../Loading/Loading';
 
 const Login = () => {
     const emailRef = useRef('');
     const passwordRef = useRef('');
-    const navigate = useNavigate();
-    const [signInWithEmailAndPassword, user, loading, error] = useSignInWithEmailAndPassword(auth);
-    const [sendPasswordResetEmail, sending, error1] = useSendPasswordResetEmail(auth);
     const [agree, setAgree] = useState(false);
 
+    const navigate = useNavigate();
     const location = useLocation();
 
     let from = location.state?.from?.pathname || "/";
+
+
+    const [signInWithEmailAndPassword, user, loading, error] = useSignInWithEmailAndPassword(auth);
+
+    const [sendPasswordResetEmail, sending, resetError] = useSendPasswordResetEmail(auth);
+
+    const [user1] = useAuthState(auth);
+
 
     if (loading || sending) {
         <Loading></Loading>
     }
 
     let displayError;
-    if (error || error1) {
+    if (error || resetError) {
         displayError = (
             <p className="text-danger">
                 {" "}
-                Error: {error?.message} {error1?.message}
+                Error: {error?.message} {resetError?.message}
             </p>
         );
     }
+
+
+
 
     const handleSubmit = async (event) => {
         event.preventDefault();
         const email = emailRef.current.value;
         const password = passwordRef.current.value;
-        if (email && password) {
-            await signInWithEmailAndPassword(email, password)
-            navigate('/')
-        }
+        // event.reset.value()
+
+        await signInWithEmailAndPassword(email, password);
+
+
     };
 
     useEffect(() => {
@@ -146,3 +155,11 @@ const Login = () => {
 };
 
 export default Login;
+
+
+/* {
+    SignInLoading && <div className='d-flex justify-content-center align-items-center w-100 registrationLoading'>
+        <Spinner animation="border" role="status">
+        <span className="visually-hidden">Loading...</span>
+    </Spinner></div>
+} */

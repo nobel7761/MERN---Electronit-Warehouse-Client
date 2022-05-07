@@ -6,7 +6,6 @@ import './SocialMediaLogin.css';
 import { useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import auth from '../../../../firebase.init';
 import { useLocation, useNavigate } from 'react-router-dom';
-import Spinner from '../../../Loading/Loading';
 import Loading from '../../../Loading/Loading';
 
 const SocialMediaLogin = () => {

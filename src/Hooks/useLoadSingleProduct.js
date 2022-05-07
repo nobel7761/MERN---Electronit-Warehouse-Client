@@ -7,7 +7,7 @@ const useLoadSingleProduct = (id) => {
         fetch(`http://localhost:5000/inventory/${id}`)
             .then(response => response.json())
             .then(data => setProduct(data))
-    }, [])
+    }, [product])
 
     return [product, setProduct];
 }

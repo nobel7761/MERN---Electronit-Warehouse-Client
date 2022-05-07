@@ -1,30 +1,31 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUserLarge, faLock, faEnvelope } from "@fortawesome/free-solid-svg-icons";
-import GoogleLogo from '../../../images/front-end-img/social-logo/google.png';
 import React, { useState } from 'react';
 import './SignUp.css';
 import { Link, useNavigate } from 'react-router-dom';
-import { useAuthState, useCreateUserWithEmailAndPassword, useSendEmailVerification } from 'react-firebase-hooks/auth';
+import { useCreateUserWithEmailAndPassword, useSendEmailVerification } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
 import { Button, Container, Form } from 'react-bootstrap';
 import { toast } from 'react-toastify';
-import Spinner from '../../Loading/Loading';
 import SignUpBanner from './SignUpBanner/SignUpBanner';
 import Loading from '../../Loading/Loading';
 import SocialMediaLogin from '../Login/SocialMediaLogin/SocialMediaLogin';
 
 const SignUp = () => {
-    const [agree, setAgree] = useState(false)
-    const [createUserWithEmailAndPassword, user, loading, error,] = useCreateUserWithEmailAndPassword(auth);
-    const [sendEmailVerification, sending, error1] = useSendEmailVerification(auth);
-
+    const [agree, setAgree] = useState(false);
     const navigate = useNavigate();
+
+
+    const [createUserWithEmailAndPassword, user, loading, error,] = useCreateUserWithEmailAndPassword(auth);
+    const [sendEmailVerification, sending, VerificationError] = useSendEmailVerification(auth);
+
+
+
+
     let displayError;
-    if (error || error1) {
+    if (error || VerificationError) {
         displayError = (
-            <p className='text-danger'>{" "} Error: {error?.message} {error1?.message}</p>
+            <p className='text-danger'>{" "} Error: {error?.message} {VerificationError?.message}</p>
         );
-        console.log('outside: ', displayError)
+
     }
     if (loading || sending) {
         <Loading></Loading>
@@ -32,25 +33,16 @@ const SignUp = () => {
     const handleFormSubmit = async (event) => {
         event.preventDefault();
 
-        const name = event.target.name.value;
         const email = event.target.email.value;
         const password = event.target.password.value;
-        const confirmPassword = event.target.reTypePassword.value;
         event.target.reset();
 
-        if (password === confirmPassword && password.length >= 6) {
-            await createUserWithEmailAndPassword(email, password);
-            await sendEmailVerification()
-            toast("Congratulation! Registration Successful! Please Check Email and Verify User")
-            navigate('/');
-        }
-        else if (password === confirmPassword && password.length < 6) {
-            toast("Password length should be minimum 6 characters!")
-        }
-        else {
-            toast("Password Didn't Matched!!!")
-        }
+        await createUserWithEmailAndPassword(email, password);
+        await sendEmailVerification();
+
+
     }
+
 
 
 
@@ -61,7 +53,6 @@ const SignUp = () => {
                 <div className="col-md-4 col-lg-4 col-10 mx-auto">
                     <h2 className="text-center mb-3">Please Sign Up</h2>
                     <div className=" mx-auto">
-                        {/* display error */}
                         {displayError}
                         <Form onSubmit={handleFormSubmit}>
                             <Form.Group className="mb-3" controlId="formBasicText">
@@ -89,15 +80,6 @@ const SignUp = () => {
                                     type="password"
                                     name="password"
                                     placeholder="Password"
-                                    required
-                                />
-                            </Form.Group>
-                            <Form.Group className="mb-3" controlId="formBasicReTypePassword">
-                                <Form.Label>Re Type Password</Form.Label>
-                                <Form.Control
-                                    type="password"
-                                    name="reTypePassword"
-                                    placeholder="Re Type Password"
                                     required
                                 />
                             </Form.Group>
