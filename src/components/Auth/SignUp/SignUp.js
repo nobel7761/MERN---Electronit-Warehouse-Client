@@ -4,11 +4,12 @@ import GoogleLogo from '../../../images/front-end-img/social-logo/google.png';
 import React, { useState } from 'react';
 import './SignUp.css';
 import { Link, useNavigate } from 'react-router-dom';
-import { useCreateUserWithEmailAndPassword, useSendEmailVerification } from 'react-firebase-hooks/auth';
+import { useAuthState, useCreateUserWithEmailAndPassword, useSendEmailVerification } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
 import { Button, Container, Form } from 'react-bootstrap';
 import { toast } from 'react-toastify';
 import Spinner from '../../Spinner/Spinner';
+import SignUpBanner from './SignUpBanner/SignUpBanner';
 
 const SignUp = () => {
     const [agree, setAgree] = useState(false)
@@ -28,21 +29,21 @@ const SignUp = () => {
     }
     const handleFormSubmit = async (event) => {
         event.preventDefault();
+
+        const name = event.target.name.value;
         const email = event.target.email.value;
         const password = event.target.password.value;
         const confirmPassword = event.target.reTypePassword.value;
         event.target.reset();
 
-        if (password === confirmPassword) {
-            if (displayError) {
-                console.log('inside: ', displayError)
-            }
-            else {
-                toast("Congratulation! Registration Successful! Please Check Email and Verify User")
-                await createUserWithEmailAndPassword(email, password);
-                await sendEmailVerification()
-                // navigate('/');
-            }
+        if (password === confirmPassword && password.length >= 6) {
+            await createUserWithEmailAndPassword(email, password);
+            await sendEmailVerification()
+            toast("Congratulation! Registration Successful! Please Check Email and Verify User")
+            navigate('/');
+        }
+        else if (password === confirmPassword && password.length < 6) {
+            toast("Password length should be minimum 6 characters!")
         }
         else {
             toast("Password Didn't Matched!!!")
@@ -53,42 +54,7 @@ const SignUp = () => {
 
     return (
         <div className='signup-container py-5'>
-            {/* <div className="signup-card mb-3">
-                <div className='text-center py-4'>
-                    <h3>Get Started With Us</h3>
-                    <p>Register a New Membership</p>
-                </div>
-                <div className="input-fields">
-                    <div className="name-field">
-                        <FontAwesomeIcon icon={faUserLarge} className='user-name' />
-                        <input type="name" name="name" placeholder='Full Name' required />
-                    </div>
-                    <div className="email-field">
-                        <FontAwesomeIcon icon={faEnvelope} className='user-email' />
-                        <input type="email" name="email" placeholder='Email Address' required />
-                    </div>
-                    <div className="password-field">
-                        <FontAwesomeIcon icon={faLock} className='pass' />
-                        <input type="password" name="password" placeholder='Password  ' required />
-                    </div>
-                    <div className="password-field">
-                        <FontAwesomeIcon icon={faLock} className='pass' />
-                        <input type="password" name="re-typePassword" placeholder='ReType Password  ' required />
-                    </div>
-                    <div className="checkboxes">
-                        <div>
-                            <input type="checkbox" name="terms" className='me-2' onClick={() => setAgree(!agree)} />
-                            I agree to the terms
-                        </div>
-
-                    </div>
-                    <button type='submit' className='btn btn-sign-in' disabled={!agree}>SIGN Up</button>
-                    <div className='d-flex justify-content-center mt-3'>
-                        <p>Already have an account? <span className='register-text' onClick={() => navigate('/login')}>Please Login</span></p>
-                    </div>
-                </div>
-            </div> */}
-
+            <SignUpBanner></SignUpBanner>
             <Container>
                 <div className="col-md-4 col-lg-4 col-10 mx-auto">
                     <h2 className="text-center mb-3">Please Sign Up</h2>

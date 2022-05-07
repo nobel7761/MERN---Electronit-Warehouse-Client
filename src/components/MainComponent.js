@@ -11,6 +11,7 @@ import NotFound from './pages/NotFound/NotFound';
 
 import Header from './Shared/Header/Header';
 import Footer from './Shared/Footer/Footer';
+import Inventory from './pages/Inventory/Inventory';
 
 const MainComponent = () => {
     return (
@@ -25,6 +26,7 @@ const MainComponent = () => {
                 <Route path='/manage-inventories' element={<ManageInventories></ManageInventories>}></Route>
                 <Route path='/add-items' element={<AddItems></AddItems>}></Route>
                 <Route path='/my-items' element={<MyItems></MyItems>}></Route>
+                <Route path='/inventory/:id' element={<Inventory></Inventory>}></Route>
 
                 <Route path='*' element={<NotFound></NotFound>}></Route>
             </Routes>

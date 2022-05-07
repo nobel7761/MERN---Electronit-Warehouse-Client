@@ -1,0 +1,48 @@
+.header-top {
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid white;
+}
+
+.header-top a {
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 300;
+    color: white;
+}
+
+.header-top a:hover {
+    color: #6cbbfa;
+}
+
+.logo {
+    width: 170px;
+    padding: 20px 0;
+}
+
+.header-title {
+    margin-right: 20px;
+}
+
+.home-content {
+    margin-top: 15%;
+}
+
+.home-content h1 {
+    font-size: 45px;
+    font-weight: 400;
+}
+
+.home-content p {
+    font-size: 25px;
+    font-weight: 400;
+}
+
+.logout-btn {
+    outline: none;
+    background: none;
+    border: none;
+    color: white;
+}

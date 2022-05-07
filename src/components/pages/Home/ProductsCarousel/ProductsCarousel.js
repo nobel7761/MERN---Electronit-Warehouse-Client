@@ -1,14 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
+import useLoadProducts from '../../../../Hooks/useLoadProducts';
 import Product from '../../../product/Product';
 import './ProductsCarousel.css';
 
 const ProductsCarousel = () => {
-    const [products, setProducts] = useState([]);
-    useEffect(() => {
-        fetch('http://localhost:5000/products')
-            .then(response => response.json())
-            .then(data => setProducts(data))
-    }, [])
+    const [products, setProducts] = useLoadProducts();
     return (
         <div className='products-container'>
             {

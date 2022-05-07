@@ -35,15 +35,15 @@ const Footer = () => {
                             </li>
                             <li>
                                 <FontAwesomeIcon icon={faArrowRightLong} className='me-2' />
-                                <Link to='/signup'>Manage Inventories</Link>
+                                <Link to='/manage-inventories'>Manage Inventories</Link>
                             </li>
                             <li>
                                 <FontAwesomeIcon icon={faArrowRightLong} className='me-2' />
-                                <Link to='/signup'>Add Items</Link>
+                                <Link to='/add-items'>Add Items</Link>
                             </li>
                             <li>
                                 <FontAwesomeIcon icon={faArrowRightLong} className='me-2' />
-                                <Link to='/signup'>My Items</Link>
+                                <Link to='/my-items'>My Items</Link>
                             </li>
                         </ul>
                     </div>

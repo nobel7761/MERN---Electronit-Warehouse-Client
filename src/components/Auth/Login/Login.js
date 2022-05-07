@@ -1,54 +1,142 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEnvelope, faLock } from "@fortawesome/free-solid-svg-icons";
-import GoogleLogo from '../../../images/front-end-img/social-logo/google.png';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './Login.css';
-import { useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+import SignUpBanner from '../SignUp/SignUpBanner/SignUpBanner';
+import { Button, Container, Form } from 'react-bootstrap';
+import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import auth from '../../../firebase.init';
+import { toast } from 'react-toastify';
+import Spinner from '../../Spinner/Spinner';
 
 const Login = () => {
     const navigate = useNavigate();
+    const [signInWithEmailAndPassword, user, loading, error] = useSignInWithEmailAndPassword(auth);
+    const [sendPasswordResetEmail, sending, error1] = useSendPasswordResetEmail(auth);
+    const [agree, setAgree] = useState(false);
+
+    const location = useLocation();
+
+    let from = location.state?.from?.pathname || "/";
+
+    if (loading || sending) {
+        <Spinner></Spinner>
+    }
+
+    let displayError;
+    if (error || error1) {
+        displayError = (
+            <p className="text-danger">
+                {" "}
+                Error: {error?.message} {error1?.message}
+            </p>
+        );
+    }
+
+
+    const handleSubmit = async (event) => {
+        event.preventDefault();
+        const email = event.target.email.value;
+        const password = event.target.password.value;
+        if (email && password) {
+            await signInWithEmailAndPassword(email, password)
+            navigate('/')
+        }
+    };
+
+    useEffect(() => {
+        if (user) {
+            navigate(from, { replace: true });
+        }
+    }, [user]);
+
+    const resetPassword = async (event) => {
+        const email = event.target.email.value;
+        if (email) {
+            await sendPasswordResetEmail(email);
+            toast("Send email");
+        } else {
+            toast("Please enter your email address");
+        }
+    };
+
 
     return (
-        <div className='login-container py-5'>
-            <h1 className='text-center'>Login Page</h1>
-            <div className="login-card mb-3">
-                <div className='text-center py-4'>
-                    <h3>Let's Get Started</h3>
-                    <p>Login to continue to electronics Warehouse.</p>
-                </div>
-                <div className="input-fields">
-                    <div className="email-field">
-                        <FontAwesomeIcon icon={faEnvelope} className='user' />
-                        <input type="email" name="email" required placeholder='Email Address' />
-                    </div>
-                    <div className="password-field">
-                        <FontAwesomeIcon icon={faLock} className='pass' />
-                        <input type="password" name="password" required placeholder='Password  ' />
-                    </div>
-                    <div className="checkboxes">
-                        <div>
-                            <input type="checkbox" name="Remember Me" className='me-2' />
-                            Remember Me
-                        </div>
-                        <div>
-                            <p>Forget Password?</p>
-                        </div>
-                    </div>
-                    <button className='btn btn-sign-in'>SIGN IN</button>
-                    <div className='d-flex justify-content-center mt-3'>
-                        <p>Don't have an account? <span className='register-text' onClick={() => navigate('/signup')}>Please Register</span></p>
-                    </div>
-                </div>
-            </div>
+        <div className="login-container py-5">
+            <SignUpBanner></SignUpBanner>
+            <Container>
+                <h2 className="text-center mb-3 ">Please Log In</h2>
+                <div className="col-md-4 col-lg-4 col-10 mx-auto">
+                    {displayError}
+                    <Form onSubmit={handleSubmit} className="">
+                        <Form.Group className="mb-3" controlId="formBasicEmail">
+                            <Form.Label>Email address</Form.Label>
+                            <Form.Control
+                                type="email"
+                                name="email"
+                                placeholder="Enter email"
+                            />
+                        </Form.Group>
 
-            <div className='social-login-section'>
-                <p>- Login With -</p>
-                <button type="submit" className='google'>
-                    <img src={GoogleLogo} alt="" srcset="" style={{ width: '30px' }} /> <span>Google Login</span>
-                </button>
+                        <Form.Group className="mb-3" controlId="formBasicPassword">
+                            <Form.Label>Password</Form.Label>
+                            <Form.Control
+                                type="password"
+                                name="password"
+                                placeholder="Password"
+                            />
+                        </Form.Group>
 
-            </div>
-        </div >
+
+                        <Form.Group className="mb-3" controlId="formBasicCheckbox">
+                            <Form.Check
+                                onClick={() => setAgree(!agree)}
+                                className={agree ? "text-primary" : "text-danger"}
+                                type="checkbox"
+                                label="Accept the terms and condition"
+                            />
+                        </Form.Group>
+
+                        <Button
+                            disabled={!agree}
+                            className="w-50 mx-auto d-block"
+                            variant="primary"
+                            type="submit"
+                        >
+                            Log In
+                        </Button>
+
+                        <p className="mt-3">
+                            {" "}
+                            Create a new account!
+                            <span className="ms-2">
+                                <Link className="text-decoration-none" to="/signup">
+                                    Sign Up
+                                </Link>
+                            </span>
+                        </p>
+                        <p>
+                            Forget Password?{" "}
+                            <Button onClick={resetPassword} variant="link">
+                                Reset Password
+                            </Button>
+                        </p>
+                    </Form>
+                    {/* after & before line */}
+                    <div className="d-flex align-items-center my-4">
+                        <div
+                            style={{ width: "48%", height: "2px" }}
+                            className="bg-primary "
+                        ></div>
+                        <div className="mx-2 pb-1">Or</div>
+                        <div
+                            style={{ width: "48%", height: "2px" }}
+                            className="bg-primary"
+                        ></div>
+                    </div>
+
+                </div>
+            </Container>
+        </div>
     );
 };
 

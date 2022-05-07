@@ -1,0 +1,42 @@
+.login-container {
+    background-color: white;
+}
+
+.product-details strong {
+    font-size: 20px;
+}
+
+.product-details p {
+    color: black;
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+.reStock-section {
+    background-color: lightgray;
+}
+
+.reStock-section h1 {
+    margin: 0;
+    padding: 0;
+    border: none;
+    font-size: 35px;
+}
+
+.reStock-section input {
+    width: 400px;
+    outline: none;
+    border: none;
+    padding: 10px 0;
+    padding-left: 20px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.reStock-section button {
+    font-size: 20px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}

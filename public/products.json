@@ -1,0 +1,137 @@
+[
+    {
+        "picture": "https://www.startech.com.bd/image/cache/catalog/laptop/razer/blade-15-base-model-core-i7-10th-gen/blade-15-base-model-core-i7-10th-gen-500x500.jpg",
+        "name": "Razer Blade 15 Base",
+        "description": "Razer has finally brought a laptop that is truly is made for gamers. From the design to the intricate choice of components has made this laptop be the number one choice for any gamer. From sleek design a to the battery life this is the best portable gaming laptop in its generation. Nothing can compare to the raw performance that this laptop provides. It is incomparable to any other gaming laptop.",
+        "price": 2000,
+        "quantity": 26,
+        "supplier": "MANGLO",
+        "sold": 5
+    },
+    {
+        "picture": "https://www.startech.com.bd/image/cache/catalog/monitor/samsung/c49g95tssw/c49g95tssw-1-500x500.jpg",
+        "name": "Samsung Odyssey C49G95TSSW 49",
+        "description": "The latest Samsung Odyssey C49G95TSSW Gaming Monitor comes with 49'' 2k (5120 x 1440) LED Curved Display. This gaming monitor's display is featured with Max 240Hz Frame Rate, Active Display Size (HxV) (mm) 1191.936(H) x 335.232(V), Screen Curvature 1000R, Aspect Ratio 32:09:00, Panel Type VA, Brightness (Typical) 420cd/m2, Peak Brightness (Typical) 1000cd/m2 cd/㎡, Brightness (Min) 300cd/m2, Contrast Ratio Static 2500:1(Typ), Dynamic Contrast Ratio Mega DCR, HDR(High Dynamic Range), Resolution 5,120 x 1,440, Response Time 1(GTG) ms, Viewing Angle (H/V) 178°(H)/178°(V), Color Support Max 1.07B, Color Gamut (NTSC 1976) 88%(Typ.), Color Gamut (DCI Coverage) 0.95, sRGB Coverage 125%(Typ.), Adobe RGB Coverage 92%(Typ.). This latest Samsung C49G95TSSW Gaming Monitor is also featured with Eye Saver Mode, Flicker Free, Picture-In-Picture, Picture-By-Picture, Quantum Dot Color.FreeSync Premium Pro, G-Sync, Off Timer Plus.",
+        "price": 1900,
+        "quantity": 21,
+        "supplier": "ENVIRE",
+        "sold": 1
+    },
+    {
+        "picture": "https://www.startech.com.bd/image/cache/catalog/tablet/apple/ipad-air-5th-gen/ipad-air-blue-01-500x500.jpg",
+        "name": "Apple iPad Air 5th Gen ",
+        "description": "The latest Apple iPad Air 5th Gen features an all-screen design with stunning Blue color. It has a 10.9-inch (2360x1640) LED‑backlit Multi‑Touch Liquid Retina display. The 10.9-inch Liquid Retina display features advanced technologies like True Tone, P3 wide color, and an anti‑reflective coating. It offers a 2360x1640‑pixel resolution at 264 pixels per inch (PPI). Apple Touch ID is built into the top button, so you can use your fingerprint to unlock your iPad and sign in to apps.",
+        "price": 750,
+        "quantity": 27,
+        "supplier": "ACCIDENCY",
+        "sold": 2
+    },
+    {
+        "picture": "https://www.startech.com.bd/image/cache/catalog/projector/xiaomi/mi-smart-projector-2/mi-smart-projector-2-01-500x500.jpg",
+        "name": "Xiaomi Mi Smart Projector 2",
+        "description": "The Xiaomi Mi Smart Projector 2 is a compact projector from Xiaomi. It offers excellent image quality with FHD 1080p resolution, multi-angle keystone correction, and the inclusion of Android TV. It delivers high-quality images and sharp details. It comes with a brightness of up to 500 ANSI lumens and the use of diffuse reflection. The Mi Smart Projector 2 features automatic multi-angle keystone correction across 3 axes and 6 directions to provide a perfect rectangle, so you don't have to spend long minutes manually correcting it. The Smart Projector 2 comes equipped with a 3.5mm audio jack, a USB 2.0 port and an HDMI 2.0 port, the latter with 4K video input.",
+        "price": 542,
+        "quantity": 22,
+        "supplier": "ZILLANET",
+        "sold": 5
+    },
+    {
+        "picture": "https://www.startech.com.bd/image/cache/catalog/camera/dslr-camera/canon/eos-250d/eos-250d-01-500x500.jpg",
+        "name": "CANON EOS 250D 24.1MP ",
+        "description": "The Canon EOS 250D is world's lightest DSLR with vari-angle screen. It has a classic feel and intuitive design. Its 24.1MP photos and 4K movies are clear, sharp, and packed with colour even in low light. This is thanks to an APS-C sensor, powerful autofocus and DIGIC 8 with Digital Lens Optimizer. The Vari-Angle touchscreen makes awkward angles and selfies easy.",
+        "price": 650,
+        "quantity": 37,
+        "supplier": "TECHADE",
+        "sold": 4
+    },
+    {
+        "picture": "https://www.startech.com.bd/image/cache/catalog/printer/rongta/rp80iv/rp80iv-01-500x500.jpg",
+        "name": "Rongta RP80IV Thermal POS",
+        "description": "Rongta RP80IV Thermal Pos Printer featured with 250mm/s high speed printing, easy to maintain, improve work efficiency, Low noise, high speed image & characters printing, Easy paper loading, with auto cutter, partial/full cut optional, Flexible installation on countertop or wall using optional bracket and support paper out alarm and print prompt.",
+        "price": 482,
+        "quantity": 39,
+        "supplier": "ZYTRAC",
+        "sold": 3
+    },
+    {
+        "picture": "https://www.startech.com.bd/image/cache/catalog/router/asus/rog-rapture-ax11000/asus-rog-rapture-ax11000-500x500.jpg",
+        "name": "Asus ROG Rapture GT AX11000",
+        "description": "To know what the ROG RAPTURE AX 11000 can do, watch the video and get amazed. you definitely need it! Star Tech has brought this technology to you with the best pricing compared to anywhere in Bangladesh. Get ROG RAPTURE AX 11000 before stock finishes.",
+        "price": 550,
+        "quantity": 38,
+        "supplier": "NEUROCELL",
+        "sold": 2
+    },
+    {
+        "picture": "https://www.pngall.com/wp-content/uploads/5/Samsung-TV-PNG.png",
+        "name": "SAMSUNG TV",
+        "description": "Samsung 32N4010 is a 32 inch Basic HD LED Television from the brand Samsung. The Display Size of this TV is 32 inches and it's an LED Screen Black colored HD-Ready Resolution Standard Television.",
+        "price": 348,
+        "quantity": 24,
+        "supplier": "BLANET",
+        "sold": 9
+    },
+    {
+        "picture": "https://www.startech.com.bd/image/cache/catalog/television/xiaomi/mi-4s-55-net/mi-4s-55-500x500.jpg",
+        "name": "Mi 4S 55 INCH 4K ANDROID TV",
+        "description": "The new Xiaomi Mi TV 4S V53R 55 4K UltraHD Smart TV Android OS LED is one of the most interesting TVs of the moment, specially designed for all those who love audiovisual content whether it is your favorite series or your favorite video games. This Mi TV is Global version. Come and find out why it is one of the most interesting TVs of the moment! The new Xiaomi Xiaomi Mi TV 4S V53R 55 4K UltraHD Smart TV Android OS LED​​​​​​​ is one of the largest TVs of the Chinese brand.",
+        "price": 700,
+        "quantity": 31,
+        "supplier": "PROXSOFT",
+        "sold": 2
+    },
+    {
+        "picture": "https://www.startech.com.bd/image/cache/catalog/television/xiaomi/mi-p1/mi-p1-01-500x500.jpg",
+        "name": "Xiaomi Mi P1 Android 4K TV",
+        "description": "Xiaomi Mi P1 L43M6-6AEU Smart Android TV comes with a 43 4K UHD (3,840 x 2,160) display and epic views with a borderless design. 4K UHD resolution delivers true-to-life images with more detail and greater depth. It has a viewing angle of 178°(H)/178°(V). The Mi P1 features a MediaTek MT9611 processor. It is equipped with Quad A55, up to 1.5GHz CPU, and Mali G52 MP2 GPU.",
+        "price": 550,
+        "quantity": 24,
+        "supplier": "ISOTERNIA",
+        "sold": 7
+    },
+    {
+        "picture": "https://www.startech.com.bd/image/cache/catalog/brand-pc/dell/3420/Untitled-1-500x500.jpg",
+        "name": "Dell 3420 Workstation",
+        "description": "Intel Xeon Processor E3-1240 v5 (Quad Core HT 3.5Ghz, 3.9Ghz Turbo, 8MB)",
+        "price": 560,
+        "quantity": 38,
+        "supplier": "LUDAK",
+        "sold": 10
+    },
+    {
+        "picture": "https://www.startech.com.bd/image/cache/catalog/Fax/brother%20/28-500x500.jpg",
+        "name": "Brother Laser Fax",
+        "description": "Brother FAX-2840 High Speed Mono Laser Fax Machine. 33.6K bps modem, approx. 2.5 sec/page transmission",
+        "price": 786,
+        "quantity": 34,
+        "supplier": "CINCYR",
+        "sold": 10
+    },
+    {
+        "picture": "https://www.startech.com.bd/image/cache/catalog/television/sony/kd-65x7500h/kd-65x7500h-01-500x500.jpg",
+        "name": "Sony KD-65x7500H 65 4K ",
+        "description": "Sony KD-65x7500H HD Smart Android LED TV comes with 65 Slim 4K Ultra HD Smart Android LED TV. It's Display is designed with Size 65-inch, Screen Type LED, Resolution 3840 x 2160 Pixels. This new TV has some smart features, these are -Android, Youtube, Netflix and Google Play Store, Google Assistant.",
+        "price": 1200,
+        "quantity": 20,
+        "supplier": "GORGANIC",
+        "sold": 6
+    },
+    {
+        "picture": "https://www.startech.com.bd/image/cache/catalog/television/sony/65x9000h/65x9000h-01-500x500.jpg",
+        "name": "Sony Bravia 65X9000H 65 Inch",
+        "description": "Sony Bravia 65X9000H 65 Inch 4K Ultra HD Smart Android LED TV is 2020 year model. The Sony KD-65X9000H 65 inch Full Array LED 4K Ultra HD High Dynamic Range (HDR) Smart TV featured with a undefined display for your viewing pleasure.",
+        "price": 1508,
+        "quantity": 32,
+        "supplier": "KIDGREASE",
+        "sold": 9
+    },
+    {
+        "picture": "https://www.startech.com.bd/image/cache/catalog/television/sony/a8h/a8h-01-500x500.jpg",
+        "name": "Sony BRAVIA 65A8H 65-inch ",
+        "description": "Sony Bravia 65A8H Television comes with excellent viewing experience and all the latest features. Sony BRAVIA 65A8H 65-inch OLED 4K Ultra HD Smart TV is 2020 year. Its display features with 65 inch 4K, 3840 x 2160 Pixels, 100 Hz, 178 Degrees Horizontal Viewing Angles, 178 Degrees",
+        "price": 3000,
+        "quantity": 38,
+        "supplier": "BRAINCLIP",
+        "sold": 4
+    }
+]

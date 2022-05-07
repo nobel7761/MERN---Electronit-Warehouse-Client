@@ -1,0 +1,8 @@
+.login-container h1 {
+    width: 50%;
+}
+
+.delete-icon {
+    color: red;
+    font-size: 30px;
+}

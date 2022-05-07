@@ -1,0 +1,10 @@
+.signupbanner-container {
+    position: relative;
+}
+
+.signupbanner-container img {
+    position: absolute;
+    top: -540px;
+    width: 100%;
+    z-index: -1;
+}

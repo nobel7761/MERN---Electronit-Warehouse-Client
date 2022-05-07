@@ -1,5 +1,5 @@
 .first-section {
-    padding: 100px 0;
+    padding: 350px 0 100px;
 }
 
 .first-section h1 {
@@ -38,4 +38,78 @@
     font-size: 16px;
     margin: 15px 0;
     font-weight: 400;
+}
+
+.second-section {
+    background-color: rgb(248, 250, 248);
+}
+
+.third-section p {
+    color: #172b4c;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.unilogo {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    row-gap: 100px;
+}
+
+.unilogo img {
+    width: 150px;
+}
+
+.fourth-section {
+    background-color: #F8FAF8;
+}
+
+.fourth-section p {
+    color: #172b4c;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.fourth-section ul {
+    list-style: none;
+    margin-left: -30px;
+}
+
+.fourth-section-icon {
+    color: #6CBBFA;
+}
+
+.icon-background {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: white;
+}
+
+
+
+.fourth-section-icon {
+    color: #0C1A32;
+    font-size: 20px;
+}
+
+
+
+.fourth-section h5 {
+    font-size: 16px;
+    color: #172b4c;
+    font-weight: 600;
+    margin: 0 0 5px;
+}
+
+.fourth-section h6 {
+    font-size: 14px;
+    color: #172b4c;
+    font-weight: 400;
+    margin: 0 0 5px;
+}
+
+.manage-btn {
+    color: black;
 }
