@@ -13,9 +13,6 @@ const Inventory = () => {
     const { id } = useParams();
     const [product] = useLoadSingleProduct(id);
 
-
-
-
     const handleUpdateQuantity = () => {
         const productQuantity = product.quantity;
         const productSold = product.sold;

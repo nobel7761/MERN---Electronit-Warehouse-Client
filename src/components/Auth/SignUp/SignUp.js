@@ -8,8 +8,10 @@ import { useAuthState, useCreateUserWithEmailAndPassword, useSendEmailVerificati
 import auth from '../../../firebase.init';
 import { Button, Container, Form } from 'react-bootstrap';
 import { toast } from 'react-toastify';
-import Spinner from '../../Spinner/Spinner';
+import Spinner from '../../Loading/Loading';
 import SignUpBanner from './SignUpBanner/SignUpBanner';
+import Loading from '../../Loading/Loading';
+import SocialMediaLogin from '../Login/SocialMediaLogin/SocialMediaLogin';
 
 const SignUp = () => {
     const [agree, setAgree] = useState(false)
@@ -25,7 +27,7 @@ const SignUp = () => {
         console.log('outside: ', displayError)
     }
     if (loading || sending) {
-        <Spinner></Spinner>
+        <Loading></Loading>
     }
     const handleFormSubmit = async (event) => {
         event.preventDefault();
@@ -137,19 +139,11 @@ const SignUp = () => {
                                 className="bg-primary"
                             ></div>
                         </div>
-                        {/* login with others */}
-                        {/* <SocialLogin></SocialLogin>*/}
+
                     </div>
                 </div>
             </Container>
-
-            {/* <div className='social-login-section'>
-                <p>- Register With -</p>
-                <button type="submit" className='google' disabled={!agree}>
-                    <img src={GoogleLogo} alt="" srcset="" style={{ width: '30px' }} /> <span>Google Sign Up</span>
-                </button>
-
-            </div> */}
+            <SocialMediaLogin></SocialMediaLogin>
         </div >
     );
 };

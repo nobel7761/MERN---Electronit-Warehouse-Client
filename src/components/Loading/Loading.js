@@ -1,7 +1,7 @@
 import React from 'react';
-import { Container } from 'react-bootstrap';
+import { Container, Spinner } from 'react-bootstrap';
 
-const Spinner = () => {
+const Loading = () => {
     return (
         <Container>
             <Spinner animation="border" role="status">
@@ -11,4 +11,4 @@ const Spinner = () => {
     );
 };
 
-export default Spinner;
+export default Loading;

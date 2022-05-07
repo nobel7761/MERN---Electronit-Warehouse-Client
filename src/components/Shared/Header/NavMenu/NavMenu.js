@@ -46,11 +46,11 @@ const NavMenu = () => {
                     <Nav className="ms-auto ">
                         <CustomLink to="/home" className='nav-link header-title'>Home</CustomLink>
                         <CustomLink to="/blogs" className='nav-link header-title'>Blogs</CustomLink>
-                        <CustomLink to="/manage-inventories" className='nav-link header-title'>Manage Inventories</CustomLink>
+
                         {
                             user?.displayName || user?.email ? (
                                 <>
-
+                                    <CustomLink to="/manage-inventories" className='nav-link header-title'>Manage Inventories</CustomLink>
                                     <CustomLink to="/add-items" className='nav-link header-title'>Add Items</CustomLink>
                                     <CustomLink to="/my-items" className='nav-link header-title'>My Items</CustomLink>
                                     <button className='logout-btn' onClick={() => signOut(auth)}>Logout</button>

@@ -6,7 +6,9 @@ import { Button, Container, Form } from 'react-bootstrap';
 import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
 import { toast } from 'react-toastify';
-import Spinner from '../../Spinner/Spinner';
+import Spinner from '../../Loading/Loading';
+import SocialMediaLogin from './SocialMediaLogin/SocialMediaLogin';
+import Loading from '../../Loading/Loading';
 
 const Login = () => {
     const navigate = useNavigate();
@@ -19,7 +21,7 @@ const Login = () => {
     let from = location.state?.from?.pathname || "/";
 
     if (loading || sending) {
-        <Spinner></Spinner>
+        <Loading></Loading>
     }
 
     let displayError;
@@ -136,6 +138,7 @@ const Login = () => {
 
                 </div>
             </Container>
+            <SocialMediaLogin></SocialMediaLogin>
         </div>
     );
 };
