@@ -15,8 +15,8 @@ const Footer = () => {
                 <div className="row">
                     <div className="col-lg-3 col-12">
                         <h4 className="footer-title">About</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis exercitation ullamco laboris</p>
-                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</p>
+                        <p>DEPOSITO is one of the leading warehouse service provider in the world! From the 18th of century it has a great frame in all over the world! </p>
+                        <p className='mt-2'>Basically, we kept electronic products such as TV, Fridge, AC, Mobile, Laptop, Tablet etc. From the starting of our warehouse journey we never get an objection from our customer about product. We ensure the best security for our customers product!</p>
                     </div>
                     <div className="col-lg-2 col-12">
                         <h4 className="footer-title">Quick Link</h4>
@@ -52,7 +52,7 @@ const Footer = () => {
                         <ul>
                             <li>
                                 <FontAwesomeIcon icon={faLocationDot} className='me-2' />
-                                123, Lorem Ipsum, Dummy City, FL-12345 USA
+                                123, New York, Washington City, FL-12345 USA
                             </li>
                             <li>
                                 <FontAwesomeIcon icon={faPhone} className='me-2' />
