@@ -1,10 +1,15 @@
 import React from 'react';
 import { Button, Form } from 'react-bootstrap';
+import { useAuthState } from 'react-firebase-hooks/auth';
 import { toast } from 'react-toastify';
+import auth from '../../../firebase.init';
 import SignUpBanner from '../../Auth/SignUp/SignUpBanner/SignUpBanner';
 import './AddItems.css';
 
 const AddItems = () => {
+    const [user] = useAuthState(auth);
+
+
     const handleSubmit = event => {
         event.preventDefault();
         const productName = event.target.name.value;
@@ -17,7 +22,7 @@ const AddItems = () => {
 
         console.log(productName, price, quantity, supplierName, picture);
 
-        const product = { picture: picture, name: productName, quantity: parseInt(quantity), supplier: supplierName, price: parseInt(price), sold: sold }
+        const product = { picture: picture, name: productName, quantity: parseInt(quantity), supplier: supplierName, price: parseInt(price), sold: sold, email: user.email }
 
 
         fetch('http://localhost:5000/product', {
