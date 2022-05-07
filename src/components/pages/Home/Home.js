@@ -32,9 +32,9 @@ const Home = () => {
 
                             <div className='bottom-line'></div>
 
-                            <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur.</p>
+                            <p>The definition of a warehouse is a place where goods are stored. An example of a warehouse is a place where furniture is kept for a furniture company.</p>
 
-                            <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
+                            <p>DEPOSITO is one of the leading warehouse service provider in the world! From the 18th of century it has a great frame in all over the world! Basically, we kept electronic products such as TV, Fridge, AC, Mobile, Laptop, Tablet etc. From the starting of our warehouse journey we never get an objection from our customer about product. We ensure the best security for our cusomets product!</p>
 
                             <button className='btn btn-primary'>Read More</button>
                         </Col>
@@ -118,27 +118,27 @@ const Home = () => {
                         <ul>
                             <li className='mb-2'>
                                 <FontAwesomeIcon icon={faCircleCheck} className='me-2 fourth-section-icon' />
-                                Donec cursus magna quis aliquam malesuada.
+                                We provides the security of our customers product!
                             </li>
                             <li className='mb-2'>
                                 <FontAwesomeIcon icon={faCircleCheck} className='me-2 fourth-section-icon' />
-                                Curabitur eleifend dui ut est dapibus, eu tempus elit feugiat.
+                                In our policy we have 80% money back guarantee if the product is damaged!
                             </li>
                             <li className='mb-2'>
                                 <FontAwesomeIcon icon={faCircleCheck} className='me-2 fourth-section-icon' />
-                                Mauris vel metus ac ante consectetur varius non nec velit.
+                                Achieve worlds best warehouse service provider in 2010.
                             </li>
                             <li className='mb-2'>
                                 <FontAwesomeIcon icon={faCircleCheck} className='me-2 fourth-section-icon' />
-                                Sed malesuada augue sed dui tincidunt luctus.
+                                We have separate space for different kind of products.
                             </li>
                             <li className='mb-2'>
                                 <FontAwesomeIcon icon={faCircleCheck} className='me-2 fourth-section-icon' />
-                                Aenean dapibus arcu et convallis sollicitudin.
+                                We make sure the best services for our client.
                             </li>
                             <li className='mb-2'>
                                 <FontAwesomeIcon icon={faCircleCheck} className='me-2 fourth-section-icon' />
-                                Aenean dapibus arcu et convallis sollicitudin.
+                                More than 10 thousands clients we have served in the last year.
                             </li>
                         </ul>
                     </div>
@@ -154,14 +154,14 @@ const Home = () => {
                                     <FontAwesomeIcon icon={faUserTie} className='fourth-section-icon' />
                                 </div>
                                 <h5>PROFESSIONAL STAFF</h5>
-                                <h6>Lorem ipsum dolor sit amet sit, consectetur adipiscing elit.</h6>
+                                <h6>We have the best team in the world to provide service to our clients in a professional manner.</h6>
                             </div>
                             <div className="col-lg-6">
                                 <div className='icon-background d-flex justify-content-center align-items-center mb-2'>
                                     <FontAwesomeIcon icon={faCarSide} className='fourth-section-icon' />
                                 </div>
                                 <h5>DISTRIBUTION & DELIVERY</h5>
-                                <h6>Lorem ipsum dolor sit amet sit, consectetur adipiscing elit.</h6>
+                                <h6>We have the best delivery & distribution system for our clients.</h6>
                             </div>
                         </div>
                         <div className="row">
@@ -170,14 +170,14 @@ const Home = () => {
                                     <FontAwesomeIcon icon={faShieldHeart} className='fourth-section-icon' />
                                 </div>
                                 <h5>EFFECTIVE USE</h5>
-                                <h6>Lorem ipsum dolor sit amet sit, consectetur adipiscing elit.</h6>
+                                <h6>We make sure the best use of our warehouse space to reduce the extra cost.</h6>
                             </div>
                             <div className="col-lg-6">
                                 <div className='icon-background d-flex justify-content-center align-items-center mb-2'>
                                     <FontAwesomeIcon icon={faEarthAsia} className='fourth-section-icon' />
                                 </div>
                                 <h5>CONTINOUS FOCUS</h5>
-                                <h6>Lorem ipsum dolor sit amet sit, consectetur adipiscing elit.</h6>
+                                <h6>Providing the best service is our only focus.</h6>
                             </div>
                         </div>
                     </div>
