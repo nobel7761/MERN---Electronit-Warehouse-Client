@@ -32,10 +32,6 @@ const NavMenu = () => {
                 </div>
             </div>
 
-
-
-
-
             <Navbar bg="transparent" expand="lg" className='navbar-sticky'>
 
                 <Navbar.Brand as={Link} to="/home">
