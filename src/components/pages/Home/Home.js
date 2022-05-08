@@ -27,7 +27,7 @@ const Home = () => {
             <div className="container">
                 <div className="first-section">
                     <div className='row g-0'>
-                        <div className='col-lg-6 col-sm-12'>
+                        <div className='first-section-left-column col-lg-6 col-sm-12'>
                             <h1>At <span className='colored-text'>Warehouse</span>, we provide a unique solution for warehousing space for business and consumers</h1>
 
                             <div className='bottom-line'></div>
