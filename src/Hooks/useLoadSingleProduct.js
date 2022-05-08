@@ -4,7 +4,7 @@ const useLoadSingleProduct = (id) => {
 
     const [product, setProduct] = useState({});
     useEffect(() => {
-        fetch(`http://localhost:5000/inventory/${id}`)
+        fetch(`https://infinite-temple-79245.herokuapp.com/inventory/${id}`)
             .then(response => response.json())
             .then(data => setProduct(data))
     }, [product])

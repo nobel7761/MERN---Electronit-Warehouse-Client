@@ -18,7 +18,7 @@ const MyItems = () => {
 
         const getItems = async () => {
             const email = user.email;
-            const url = `http://localhost:5000/user?email=${email}`;
+            const url = `https://infinite-temple-79245.herokuapp.com/user?email=${email}`;
 
             try {
                 const { data } = await axiosPrivate.get(url);
@@ -39,7 +39,7 @@ const MyItems = () => {
         const decision = window.confirm("Do You Really Want To Remove?");
         if (decision) {
             console.log("Hello", id)
-            const url = `http://localhost:5000/product/${id}`;
+            const url = `https://infinite-temple-79245.herokuapp.com/product/${id}`;
             fetch(url, {
                 method: 'DELETE',
             })

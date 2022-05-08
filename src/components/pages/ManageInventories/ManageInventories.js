@@ -15,7 +15,7 @@ const ManageInventories = () => {
         const decision = window.confirm("Do You Really Want To Remove?");
         if (decision) {
             console.log("Hello", id)
-            const url = `http://localhost:5000/product/${id}`;
+            const url = `https://infinite-temple-79245.herokuapp.com/product/${id}`;
             fetch(url, {
                 method: 'DELETE',
             })

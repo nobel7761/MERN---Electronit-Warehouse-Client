@@ -25,7 +25,7 @@ const AddItems = () => {
         const product = { picture: picture, name: productName, quantity: parseInt(quantity), supplier: supplierName, price: parseInt(price), sold: sold, email: user.email }
 
 
-        fetch('http://localhost:5000/product', {
+        fetch('https://infinite-temple-79245.herokuapp.com/product', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',

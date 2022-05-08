@@ -20,7 +20,7 @@ const Inventory = () => {
 
         const updateInfo = { quantity: (productQuantity - 1), sold: (productSold + 1) };
 
-        const url = `http://localhost:5000/product/${id}`;
+        const url = `https://infinite-temple-79245.herokuapp.com/product/${id}`;
         fetch(url, {
             method: "PUT",
             headers: {
@@ -48,7 +48,7 @@ const Inventory = () => {
         const updatedStock = { quantity: (previousQuantity + parseFloat(userProvideQuantity)), sold: productSold };
         console.log(updatedStock)
 
-        const url = `http://localhost:5000/updateStock/${id}`
+        const url = `https://infinite-temple-79245.herokuapp.com/updateStock/${id}`
         fetch(url, {
             method: "PUT",
             headers: {
