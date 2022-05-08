@@ -6,10 +6,18 @@ import { useNavigate } from 'react-router-dom';
 import useLoadProducts from '../../../Hooks/useLoadProducts';
 import SignUpBanner from '../../Auth/SignUp/SignUpBanner/SignUpBanner';
 import './ManageInventories.css';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import auth from '../../../firebase.init';
+import Loading from '../../Loading/Loading';
 
 const ManageInventories = () => {
     const navigate = useNavigate();
     const [products, setProducts] = useLoadProducts();
+    const [loading] = useAuthState(auth);
+    console.log(loading)
+    if (loading) {
+        <Loading></Loading>
+    }
 
     const removeItem = (id) => {
         const decision = window.confirm("Do You Really Want To Remove?");

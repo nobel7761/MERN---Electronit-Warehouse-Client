@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import Home from './pages/Home/Home';
 import Blogs from './pages/Blogs/Blogs';
@@ -12,8 +12,17 @@ import Header from './Shared/Header/Header';
 import Footer from './Shared/Footer/Footer';
 import Inventory from './pages/Inventory/Inventory';
 import RequireAuth from './Auth/RequireAuth/RequireAuth';
+import Loading from './Loading/Loading';
 
 const MainComponent = () => {
+    const [prelaoder, setPreload] = useState(true);
+    setTimeout(() => setPreload(false), 2800)
+
+    if (prelaoder) {
+
+        return <div style={{ height: "100vh" }} className='d-flex justify-content-center align-items-center'> <Loading></Loading>  </div>
+
+    }
     return (
         <div>
             <Header></Header>

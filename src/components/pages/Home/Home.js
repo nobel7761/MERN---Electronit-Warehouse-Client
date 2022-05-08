@@ -19,8 +19,17 @@ import Benefits from '../../../images/front-end-img/benefits.jpg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRightLong, faCarSide, faCircleCheck, faEarthAsia, faShieldHeart, faUserTie } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import auth from '../../../firebase.init';
+import Loading from '../../Loading/Loading';
 
 const Home = () => {
+    const [loading] = useAuthState(auth);
+
+    if (loading) {
+        <Loading></Loading>
+    }
+
     return (
         <div className='home-container'>
             <Banner></Banner>
