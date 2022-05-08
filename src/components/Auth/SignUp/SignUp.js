@@ -8,6 +8,7 @@ import { toast } from 'react-toastify';
 import SignUpBanner from './SignUpBanner/SignUpBanner';
 import Loading from '../../Loading/Loading';
 import SocialMediaLogin from '../Login/SocialMediaLogin/SocialMediaLogin';
+import useToken from '../../../Hooks/useToken';
 
 const SignUp = () => {
     const [agree, setAgree] = useState(false);
@@ -16,6 +17,7 @@ const SignUp = () => {
 
     const [createUserWithEmailAndPassword, user, loading, error,] = useCreateUserWithEmailAndPassword(auth);
     const [sendEmailVerification, sending, VerificationError] = useSendEmailVerification(auth);
+    const [token] = useToken(user)
 
 
 
@@ -30,6 +32,11 @@ const SignUp = () => {
     if (loading || sending) {
         <Loading></Loading>
     }
+
+    if (token) {
+        navigate('/home')
+    }
+
     const handleFormSubmit = async (event) => {
         event.preventDefault();
 

@@ -3,11 +3,13 @@ import './Login.css';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import SignUpBanner from '../SignUp/SignUpBanner/SignUpBanner';
 import { Button, Container, Form } from 'react-bootstrap';
-import { useAuthState, useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
 import { toast } from 'react-toastify';
 import SocialMediaLogin from './SocialMediaLogin/SocialMediaLogin';
 import Loading from '../../Loading/Loading';
+import axios from 'axios';
+import useToken from '../../../Hooks/useToken';
 
 const Login = () => {
     const emailRef = useRef('');
@@ -23,8 +25,12 @@ const Login = () => {
     const [signInWithEmailAndPassword, user, loading, error] = useSignInWithEmailAndPassword(auth);
 
     const [sendPasswordResetEmail, sending, resetError] = useSendPasswordResetEmail(auth);
+    const [token] = useToken(user);
 
-    const [user1] = useAuthState(auth);
+
+    if (token) {
+        navigate(from, { replace: true });
+    }
 
 
     if (loading || sending) {
@@ -51,6 +57,8 @@ const Login = () => {
         // event.reset.value()
 
         await signInWithEmailAndPassword(email, password);
+
+
 
 
     };

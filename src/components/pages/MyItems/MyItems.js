@@ -6,16 +6,34 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import { Button, Table } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrashCan } from '@fortawesome/free-solid-svg-icons';
+import axiosPrivate from '../../API/axiosPrivate';
+import { signOut } from 'firebase/auth';
+import { useNavigate } from 'react-router-dom';
 
 const MyItems = () => {
     const [myItems, setMyItems] = useState([]);
     const [user] = useAuthState(auth);
+    const navigate = useNavigate();
     useEffect(() => {
-        const url = `http://localhost:5000/user/${user.email}`;
-        fetch(url)
-            .then(response => response.json())
-            .then(data => setMyItems(data))
-    }, [])
+
+        const getItems = async () => {
+            const email = user.email;
+            const url = `http://localhost:5000/user?email=${email}`;
+
+            try {
+                const { data } = await axiosPrivate.get(url);
+                setMyItems(data)
+            }
+            catch (error) {
+                console.log(error.message)
+                if (error.response.status === 401 || error.response.status === 403) {
+                    signOut(auth);
+                    navigate('/login')
+                }
+            }
+        }
+        getItems();
+    }, [user])
 
     const removeItem = (id) => {
         const decision = window.confirm("Do You Really Want To Remove?");
