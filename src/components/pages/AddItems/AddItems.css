@@ -1,0 +1,13 @@
+@media screen and (max-width: 480px) {
+    .add-items h1 {
+        width: 100% !important;
+    }
+
+    .add-items Form {
+        width: 100% !important;
+    }
+
+    .add-items Button {
+        width: 75% !important;
+    }
+}

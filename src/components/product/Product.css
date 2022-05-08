@@ -9,3 +9,9 @@
 .card-body p {
     color: black;
 }
+
+@media screen and (max-width: 480px) {
+    .card img {
+        width: 200px;
+    }
+}

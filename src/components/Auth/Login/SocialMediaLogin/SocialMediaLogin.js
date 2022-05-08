@@ -43,7 +43,7 @@ const SocialMediaLogin = () => {
     return (
         <div className='container d-flex justify-content-center'>
             {displayError}
-            <Button variant="outline-dark" size="lg" className='w-25' onClick={googleSignIn}><FontAwesomeIcon icon={faGoogle} className='me-4' />Google Login</Button>
+            <Button variant="outline-dark" size="lg" className='w-25 social-media-btn' onClick={googleSignIn}><FontAwesomeIcon icon={faGoogle} className='me-4' />Google Login</Button>
         </div>
     );
 };

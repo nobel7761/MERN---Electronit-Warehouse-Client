@@ -42,7 +42,7 @@ const MyItems = () => {
             <div className="container">
                 <h1>My Items</h1>
                 <div className='product-list'>
-                    <Table striped bordered hover>
+                    <Table striped bordered hover responsive>
                         <thead>
                             <tr>
                                 <th>Product Name</th>

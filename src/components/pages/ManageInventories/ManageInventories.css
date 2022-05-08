@@ -6,3 +6,14 @@
     color: red;
     font-size: 30px;
 }
+
+
+@media screen and (max-width: 480px) {
+
+
+
+    .product-list th,
+    td {
+        font-size: 15px;
+    }
+}

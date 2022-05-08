@@ -18,3 +18,24 @@ p {
     margin: 0;
     color: white;
 }
+
+@media screen and (max-width: 480px) {
+
+    .banner-container img {
+        top: -450px;
+    }
+
+    .home-content-h1 {
+        font-size: 20px !important;
+    }
+
+    .home-content-p {
+        font-size: 16px !important;
+    }
+
+    .home-content-btn {
+        margin-top: 5%;
+        width: 50% !important;
+        font-size: 14px !important;
+    }
+}

@@ -2,5 +2,12 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
+}
 
+@media screen and (max-width: 480px) {
+    .products-container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 30px;
+    }
 }

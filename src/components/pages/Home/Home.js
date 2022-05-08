@@ -26,8 +26,8 @@ const Home = () => {
             <Banner></Banner>
             <div className="container">
                 <div className="first-section">
-                    <Row>
-                        <Col>
+                    <div className='row g-0'>
+                        <div className='col-lg-6 col-sm-12'>
                             <h1>At <span className='colored-text'>Warehouse</span>, we provide a unique solution for warehousing space for business and consumers</h1>
 
                             <div className='bottom-line'></div>
@@ -36,12 +36,12 @@ const Home = () => {
 
                             <p>DEPOSITO is one of the leading warehouse service provider in the world! From the 18th of century it has a great frame in all over the world! Basically, we kept electronic products such as TV, Fridge, AC, Mobile, Laptop, Tablet etc. From the starting of our warehouse journey we never get an objection from our customer about product. We ensure the best security for our cusomets product!</p>
 
-                            <button className='btn btn-primary'>Read More</button>
-                        </Col>
-                        <Col>
+                            <button className='btn btn-primary first-section-btn'>Read More</button>
+                        </div>
+                        <div className='col-lg-6 col-sm-12'>
                             <img src={SectionOne} alt="" className='img-fluid' />
-                        </Col>
-                    </Row>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -54,7 +54,7 @@ const Home = () => {
                     </div>
                     <div className='my-5'>
                         <ProductsCarousel></ProductsCarousel>
-                        <div className='d-flex flex-row-reverse py-5'>
+                        <div className='d-flex flex-row-reverse py-5 second-section-bottom-btn'>
                             <Link to='/manage-inventories'>
                                 <Button variant="outline-dark" className='manage-btn py-2'>Manage Inventories<FontAwesomeIcon icon={faArrowRightLong} className='ps-2' /></Button>
 
@@ -68,7 +68,7 @@ const Home = () => {
                 <div className="d-flex flex-column justify-content-center align-items-center text-center pb-5">
                     <h2>Some Of Our <br /> <span className='colored-text'>Reputed Clients</span></h2>
                     <div className='bottom-line'></div>
-                    <p className='py-4 w-25'>We are currently servicing clients across the sectors of FMCG, Consumer Goods, Retail, B2B and Technology</p>
+                    <p className='py-4 w-25 third-section-p'>We are currently servicing clients across the sectors of FMCG, Consumer Goods, Retail, B2B and Technology</p>
                     <div className="unilogo my-5">
                         <div>
                             <img src={UniLogo1} alt="" srcset="" />
@@ -107,8 +107,8 @@ const Home = () => {
             </div>
 
             <div className="fourth-section">
-                <div className="row">
-                    <div className="col-lg-6 g-0">
+                <div className="row g-0">
+                    <div className="col-lg-6">
                         <img src={Strength} alt="" srcset="" className='img-fluid' />
                     </div>
                     <div className="col-lg-6 p-5">
@@ -143,7 +143,7 @@ const Home = () => {
                         </ul>
                     </div>
                 </div>
-                <div className="row">
+                <div className="row g-0">
                     <div className="col-lg-6 p-5">
                         <h2 className='mb-3'>Customer <span className='colored-text'>Benefits</span></h2>
                         <div className='bottom-line mb-3'></div>
@@ -181,7 +181,7 @@ const Home = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="col-lg-6 g-0">
+                    <div className="col-lg-6">
                         <img src={Benefits} alt="" srcset="" className='img-fluid' />
                     </div>
                 </div>

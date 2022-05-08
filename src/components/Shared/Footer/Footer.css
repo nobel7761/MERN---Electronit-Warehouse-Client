@@ -128,3 +128,12 @@ svg {
 .subscribe .btn-primary:hover {
     background-color: #1892f6 !important;
 }
+
+
+@media screen and (max-width: 480px) {
+    .footer h4 {
+        margin-top: 20px;
+        text-align: center;
+        border-bottom: 5px solid white;
+    }
+}

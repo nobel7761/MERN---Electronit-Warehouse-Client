@@ -64,10 +64,10 @@ const Inventory = () => {
     }
 
     return (
-        <div className="login-container pt-5">
+        <div className="login-container inventory-page pt-5">
             <SignUpBanner></SignUpBanner>
             <h1>{product.name}</h1>
-            <div className='container d-flex'>
+            <div className='container d-flex inventory-page-container'>
 
                 <div className='d-flex justify-content-center'>
                     <img src={product.picture} alt="" srcset="" />
@@ -82,7 +82,7 @@ const Inventory = () => {
                 </div>
             </div>
             <div className='d-flex justify-content-center'>
-                <Button className='btn btn-primary w-25' size="lg" onClick={handleUpdateQuantity}>Delivered</Button>
+                <Button className='btn btn-primary w-25 inventory-page-btn' size="lg" onClick={handleUpdateQuantity}>Delivered</Button>
             </div>
 
             <div className='reStock-section mt-5'>
@@ -92,9 +92,9 @@ const Inventory = () => {
 
                     </Link>
                 </div>
-                <div className="container d-flex py-4 justify-content-between align-items-center">
+                <div className="stock-update-section container d-flex py-4 justify-content-between align-items-center">
                     <h1>Change Stock Quantity: </h1>
-                    <Form className='w-50 mx-auto d-flex' onSubmit={handleUpdateStock}>
+                    <Form className='reStock-form w-50 mx-auto d-flex' onSubmit={handleUpdateStock}>
 
                         <Form.Group controlId="formBasicEmail">
 

@@ -7,9 +7,9 @@ const Banner = () => {
         <div className='banner-container'>
             <img src={BannerPhoto} alt="" srcset="" />
             <div className='d-flex flex-column justify-content-center align-items-center text-center home-content '>
-                <h1>Welcome to Electronics Warehouse</h1>
-                <p>Store Your Electronics Accessories Here</p>
-                <button className='btn btn-primary w-25'>Learn More</button>
+                <h1 className='home-content-h1'>Welcome to Electronics Warehouse</h1>
+                <p className='home-content-p'>Store Your Electronics Accessories Here</p>
+                <button className='btn btn-primary w-25 home-content-btn'>Learn More</button>
             </div>
         </div>
     );

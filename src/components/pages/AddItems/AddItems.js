@@ -41,7 +41,7 @@ const AddItems = () => {
     return (
         <div className="login-container py-5">
             <SignUpBanner></SignUpBanner>
-            <div className='container'>
+            <div className='container add-items'>
                 <h1>Add New Item</h1>
                 <Form className='w-50 mx-auto' onSubmit={handleSubmit}>
                     <Form.Group className="mb-3" controlId="formBasicEmail">

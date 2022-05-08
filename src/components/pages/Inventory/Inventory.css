@@ -40,3 +40,56 @@
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
 }
+
+
+@media screen and (max-width: 480px) {
+    .inventory-page {
+        padding-top: 10px !important;
+    }
+
+    .inventory-page h1 {
+        font-size: 18px;
+        margin-bottom: 0px;
+    }
+
+    .inventory-page-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .inventory-page-container img {
+        width: 100%;
+    }
+
+    .inventory-page-btn {
+        width: 75% !important;
+    }
+
+    .stock-update-section {
+        flex-direction: column;
+    }
+
+    .reStock-section h1 {
+        width: 75% !important;
+        font-size: 22px;
+        margin-bottom: 20px;
+    }
+
+    .reStock-form {
+        flex-direction: column;
+        width: 80% !important;
+    }
+
+    .reStock-section input {
+        width: 100%;
+        border-radius: 5px;
+    }
+
+    .reStock-form button {
+        width: 80%;
+        margin: 0 auto;
+        margin-top: 20px;
+        font-size: 16px;
+        border-radius: 5px;
+    }
+}

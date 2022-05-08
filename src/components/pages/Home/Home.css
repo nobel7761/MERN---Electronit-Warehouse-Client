@@ -113,3 +113,49 @@
 .manage-btn {
     color: black;
 }
+
+@media screen and (max-width: 480px) {
+
+    .first-section {
+        padding: 100px 0 20px;
+    }
+
+    .first-section h1 {
+        font-size: 24px;
+    }
+
+    .bottom-line {
+        width: 50%;
+    }
+
+    .first-section-btn {
+        width: 75%;
+        margin-left: 15%;
+        margin-bottom: 5%;
+    }
+
+    .second-section-bottom-btn {
+        padding: 30px 0 !important;
+    }
+
+    .second-section {
+        padding-bottom: 0px !important;
+    }
+
+    .third-section {
+        padding: 0 !important;
+    }
+
+    .third-section-p {
+        width: 90% !important;
+        padding: 20px 0 0 !important;
+    }
+
+    .unilogo {
+        margin: 20px !important;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        row-gap: 10px;
+    }
+
+}

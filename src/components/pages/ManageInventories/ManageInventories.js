@@ -38,7 +38,7 @@ const ManageInventories = () => {
                     <Button variant="outline-dark" size="lg" onClick={() => navigate('/add-items')}>Add New Item</Button>
                 </div>
                 <div className='product-list'>
-                    <Table striped bordered hover>
+                    <Table striped bordered hover responsive>
                         <thead>
                             <tr>
                                 <th>Product Name</th>

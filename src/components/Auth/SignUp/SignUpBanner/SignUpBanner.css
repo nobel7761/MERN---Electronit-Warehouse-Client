@@ -8,3 +8,12 @@
     width: 100%;
     z-index: -1;
 }
+
+@media screen and (max-width: 480px) {
+    .signupbanner-container img {
+        position: fixed;
+        top: 0px;
+        height: 100%;
+
+    }
+}

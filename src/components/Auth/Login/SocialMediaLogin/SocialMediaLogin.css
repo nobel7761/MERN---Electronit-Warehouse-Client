@@ -1,0 +1,5 @@
+@media screen and (max-width: 480px) {
+    .social-media-btn {
+        width: 75% !important;
+    }
+}
